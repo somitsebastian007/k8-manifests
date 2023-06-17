@@ -1,0 +1,5 @@
+Curl Pod:
+kubectl run mycurlpod --image=curlimages/curl -i --tty -- sh
+
+SSH to Kind Cluster Node:
+docker exec -it <node-name> bash
