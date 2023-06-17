@@ -3,3 +3,6 @@ kubectl run mycurlpod --image=curlimages/curl -i --tty -- sh
 
 SSH to Kind Cluster Node:
 docker exec -it <node-name> bash
+
+Access Service From Pod:
+<service-name>.<namespace>.svc.cluster.local:<service-port>
