@@ -12,3 +12,9 @@ kubectl rollout history deployment/<deployment-name>
 
 Rollback Deployment to a specific revision:
 kubectl rollout undo deployment/<deployment-name> --to-revision=<revision-number>
+
+Change Default NS:
+kubectl config set-context --current --namespace=dev
+
+Run pod in a specific Node:
+kubectl run my-pod --image=nginx --restart=Never --overrides='{"spec": {"nodeName": "node-2"}}'
