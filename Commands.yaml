@@ -6,3 +6,9 @@ docker exec -it <node-name> bash
 
 Access Service From Pod:
 <service-name>.<namespace>.svc.cluster.local:<service-port>
+
+Revision history of Deployment:
+kubectl rollout history deployment/<deployment-name>
+
+Rollback Deployment to a specific revision:
+kubectl rollout undo deployment/<deployment-name> --to-revision=<revision-number>
