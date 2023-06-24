@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: my-resource-quota
+spec:
+  hard:
+    pods: "2"        # Maximum number of pods
+    requests.cpu: "250m" # Maximum CPU requests in CPU units (e.g., "2" means 2 CPU units)
+    requests.memory: 250Mi  # Maximum memory requests (e.g., "2Gi" means 2 gibibytes)
+    limits.cpu: "500m"   # Maximum CPU limits in CPU units
+    limits.memory: 500Mi  # Maximum memory limits
